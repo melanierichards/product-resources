@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a product resource! Please review the contribution guidelines to know what to expect.
+        Thanks for suggesting a product resource! Please review the [contribution guidelines](https://github.com/melanierichards/product-resources/blob/main/CONTRIBUTING.md) to know what to expect.
   - type: input
     id: title
     attributes:
