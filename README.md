@@ -2,9 +2,19 @@
 
 Resources for current and aspiring product managers, organized by topic and format. Adding helpful resources and bookmarks as I come across them! [Contribution guidelines](https://github.com/melanierichards/product-resources/blob/main/CONTRIBUTING.md)
 
+## Table of Contents
+
+* [General](#general)
+* [A/B Testing and Experimentation](#ab-testing-and-experimentation)
+* [Accessibility](#accessibility)
+* [Backlogs & Roadmaps](#backlogs--roadmaps)
+* [Data](#data)
+* [Discovery](#discovery)
+* [Growth](#growth)
+
 ## General
 
-### Books*
+### Books [*](#notes)
 
 * [Cracking the PM Career](https://bookshop.org/a/15644/9780984782895) by Jackie Bavaro and Gayle Laakmann McDowell
 
