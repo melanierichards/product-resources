@@ -15,4 +15,10 @@ Resources for current and aspiring product managers, organized by topic and form
 * [Optimizely’s A/B test sample size calculator](https://www.optimizely.com/sample-size-calculator/#/?conversion=3&effect=20&significance=95)
 * [Evan’s Awesome A/B Tools](https://www.evanmiller.org/ab-testing/)
 
+## Accessibility
+
+[Long list in my talk resources!](https://github.com/melanierichards/talks/tree/main/2021/aea-fall)
+
+## Notes
+
 \* Disclosure: I’m an affiliate of Bookshop.org. Any purchases you make using my Bookshop links will earn me (and local bookstores!) a small commission. Feel free to buy or borrow your books wherever you will, no need to use my link!
