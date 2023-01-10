@@ -16,11 +16,17 @@ Resources for current and aspiring product managers, organized by topic and form
 
 ### Blogs
 
-* [Debbie Widjaja: IRL Product](https://medium.com/irlproduct)
+* [Debbie Widjaja: IRL Product](https://medium.com/irlproduct); also [a newsletter](https://irlproduct.com)
+* [Product Talk](https://www.producttalk.org/blog/); also [a newsletter](https://teresatorres.us7.list-manage.com/subscribe?u=747bd67975a9b338b9b44d455&id=9b48b3e9dc)
 
 ### Books [*](#notes)
 
 * [Cracking the PM Career](https://bookshop.org/a/15644/9780984782895) by Jackie Bavaro and Gayle Laakmann McDowell
+
+### Newsletters
+
+* [Department of Product](https://www.departmentofproduct.com/)
+* [Lenny’s Newsletter](https://www.lennysnewsletter.com/)
 
 ## A/B Testing and Experimentation
 
