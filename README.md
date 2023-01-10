@@ -14,6 +14,10 @@ Resources for current and aspiring product managers, organized by topic and form
 
 ## General
 
+### Blogs
+
+* [Debbie Widjaja: IRL Product](https://medium.com/irlproduct)
+
 ### Books [*](#notes)
 
 * [Cracking the PM Career](https://bookshop.org/a/15644/9780984782895) by Jackie Bavaro and Gayle Laakmann McDowell
