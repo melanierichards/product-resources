@@ -46,6 +46,12 @@ Resources for current and aspiring product managers, organized by topic. Adding 
 
 * [The Adjacent User Theory](https://andrewchen.com/the-adjacent-user-theory/)
 
+## Jobs
+
+* [Department of Product](https://www.departmentofproduct.com/)
+* [Lenny’s Job Board](https://lennys-jobs.pallet.com/jobs)
+* [People-First Jobs](https://peoplefirstjobs.com/)
+
 ## Notes
 
 Disclosure: I’m an affiliate of Bookshop.org. Any book purchases you make using my Bookshop links will earn me (and local bookstores!) a small commission. Feel free to buy or borrow your books wherever you will, no need to use my link!
