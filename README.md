@@ -11,6 +11,7 @@ Resources for current and aspiring product managers, organized by topic. Adding 
 * [Data](#data)
 * [Discovery](#discovery)
 * [Growth](#growth)
+* [Jobs](#jobs)
 
 ## General
 
