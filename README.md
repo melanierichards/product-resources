@@ -52,6 +52,7 @@ Resources for current and aspiring product managers, organized by topic. Adding 
 * [Department of Product](https://www.departmentofproduct.com/)
 * [Lenny’s Job Board](https://lennys-jobs.pallet.com/jobs)
 * [People-First Jobs](https://peoplefirstjobs.com/)
+* [Product Hunt](https://www.producthunt.com/jobs?categories=Product&)
 
 ## Notes
 
