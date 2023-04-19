@@ -41,6 +41,7 @@ Resources for current and aspiring product managers, organized by topic. Adding 
 
 ## Discovery
 
+* 📖 [Continuous Discovery Habits](https://bookshop.org/a/15644/9781736633304) by Teresa Torres. An absolute favorite read!
 * [Codifying the product discovery process](https://medium.com/irlproduct/codifying-product-discovery-process-5e4db83a00ca)
 
 ## Growth
