@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Product Resources, compiled by Melanie Richards</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="index, follow">
+  </head>
+  <body>
+    <h1>Product Resources</h1>
+    <table>
+      {% for resource in resources %}
+        {% set resourceTitle = resource.Name.title[0].plain_text %}
+        {% set resourceUrl = resource.URL.url %}
+        {% set resourceDesc = resource.Desc.rich_text[0].text.content %}
+        {% set resourceTags = resource.Tags.multi_select %}
+        {% set resourceFormat = resource.Format.select.name %}
+        {% if resourceTitle and resourceUrl %}
+          <tr>
+            <td>
+              <a href="{{ resourceUrl }}">{{ resourceTitle }}</a>
+              {% if resourceDesc %}
+                <p>{{ resourceDesc }}</p>
+              {% endif %}
+            </td>
+            <td>
+              {% if resourceFormat %}
+                {{ resourceFormat }}
+              {% endif %}
+            </td>
+            <td>
+              {% set comma = joiner() %}
+              {% for tag in resourceTags -%}
+                {{ comma() }} {{ tag.name }}
+              {%- endfor %}
+            </td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </table>
+  </body>
+</html>

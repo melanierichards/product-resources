@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "npx @11ty/eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@notionhq/client": "^2.2.5",
+    "dotenv": "^16.0.3"
+  }
+}
