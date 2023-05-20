@@ -2,59 +2,25 @@
 
 Resources for current and aspiring product managers, organized by topic. Adding helpful resources and bookmarks as I come across them! [Contribution guidelines](https://github.com/melanierichards/product-resources/blob/main/CONTRIBUTING.md)
 
-## Table of Contents
+## Tech Stack
 
-* [General](#general)
-* [A/B Testing and Experimentation](#ab-testing-and-experimentation)
-* [Accessibility](#accessibility)
-* [Backlogs & Roadmaps](#backlogs--roadmaps)
-* [Data](#data)
-* [Discovery](#discovery)
-* [Growth](#growth)
-* [Jobs](#jobs)
+This site is built with:
 
-## General
+* **[Eleventy](https://www.11ty.dev/):** static site generator
+* **[Notion API](https://developers.notion.com/page/notion-platform-roadmap):** fetches a product resources database I have in my personal Notion environment.
 
-* 📖 [Cracking the PM Career](https://bookshop.org/a/15644/9780984782895) by Jackie Bavaro and Gayle Laakmann McDowell
-* [Department of Product](https://www.departmentofproduct.com/)
-* [IRL Product](https://medium.com/irlproduct); also [a newsletter](https://irlproduct.com)
-* [Lenny’s Newsletter](https://www.lennysnewsletter.com/)
-* [Product Talk](https://www.producttalk.org/blog/); also [a newsletter](https://teresatorres.us7.list-manage.com/subscribe?u=747bd67975a9b338b9b44d455&id=9b48b3e9dc)
+## Getting Started
 
-## A/B Testing and Experimentation
+Since I am using a private database, these instructions are probably most useful if you want to create a similar site, vs contribute to this one. If you have a content suggestion, feel free to [file an issue](https://github.com/melanierichards/product-resources/issues).
 
-* Statistical Calculators
-  * [Optimizely’s A/B test sample size calculator](https://www.optimizely.com/sample-size-calculator/#/?conversion=3&effect=20&significance=95)
-  * [Evan’s Awesome A/B Tools](https://www.evanmiller.org/ab-testing/)
+1. Fork and clone the project.
+2. Run `npm install` from your command line to install dependencies (assumes you have Node and npm installed).
+3. Set the environment variables specified below.
+4. Run `npm run start` and visit `localhost:8080`.
 
-## Accessibility
+### Environment variables
 
-[Long list in my talk resources!](https://github.com/melanierichards/talks/tree/main/2021/aea-fall)
+Rename the `.env.sample` file in the root of this project to `.env`. Update the following variable values:
 
-## Backlogs & Roadmaps
-
-* [RICE: Simple prioritization for product managers](https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/)
-
-## Data
-
-* [Model SQL Tutorial](https://mode.com/sql-tutorial/)
-
-## Discovery
-
-* 📖 [Continuous Discovery Habits](https://bookshop.org/a/15644/9781736633304) by Teresa Torres. An absolute favorite read!
-* [Codifying the product discovery process](https://medium.com/irlproduct/codifying-product-discovery-process-5e4db83a00ca)
-
-## Growth
-
-* [The Adjacent User Theory](https://andrewchen.com/the-adjacent-user-theory/)
-
-## Jobs
-
-* [Department of Product](https://www.departmentofproduct.com/)
-* [Lenny’s Job Board](https://lennys-jobs.pallet.com/jobs)
-* [People-First Jobs](https://peoplefirstjobs.com/)
-* [Product Hunt](https://www.producthunt.com/jobs?categories=Product&)
-
-## Notes
-
-Disclosure: I’m an affiliate of Bookshop.org. Any book purchases you make using my Bookshop links will earn me (and local bookstores!) a small commission. Feel free to buy or borrow your books wherever you will, no need to use my link!
+* `NOTION_TOKEN`: the secret generated when you create a [new Notion integration](https://developers.notion.com/docs/create-a-notion-integration#step-1-create-an-integration).
+* `DATABASE_ID`: the [ID for the database](https://developers.notion.com/docs/create-a-notion-integration#step-3-save-the-database-id) you want to use. Note, you need to first allow your integration to [access the database](https://developers.notion.com/docs/create-a-notion-integration#step-2-share-a-database-with-your-integration).
