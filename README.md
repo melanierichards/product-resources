@@ -2,12 +2,17 @@
 
 Resources for current and aspiring product managers, organized by topic. Adding helpful resources and bookmarks as I come across them! [Contribution guidelines](https://github.com/melanierichards/product-resources/blob/main/CONTRIBUTING.md)
 
+## Live Site
+
+https://product.melanie-richards.com/
+
 ## Tech Stack
 
 This site is built with:
 
 * **[Eleventy](https://www.11ty.dev/):** static site generator
 * **[Notion API](https://developers.notion.com/page/notion-platform-roadmap):** fetches a product resources database I have in my personal Notion environment.
+* **[Netlify](https://netlify.com):** where this site is deployed to (disclaimer: my current employer!).
 
 ## Getting Started
 
@@ -24,3 +29,5 @@ Rename the `.env.sample` file in the root of this project to `.env`. Update the 
 
 * `NOTION_TOKEN`: the secret generated when you create a [new Notion integration](https://developers.notion.com/docs/create-a-notion-integration#step-1-create-an-integration).
 * `DATABASE_ID`: the [ID for the database](https://developers.notion.com/docs/create-a-notion-integration#step-3-save-the-database-id) you want to use. Note, you need to first allow your integration to [access the database](https://developers.notion.com/docs/create-a-notion-integration#step-2-share-a-database-with-your-integration).
+
+If you deploy your site on a platform like Netlify, you will need to set these same [environment variables](https://docs.netlify.com/environment-variables/overview/#app) there as well!
