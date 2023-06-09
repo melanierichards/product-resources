@@ -12,40 +12,44 @@
       <h1>Product Resources</h1>
       <p>Just a list of resources related to product management that I’ve found useful.</p>
     </header>
-    <table>
-      <tr>
-        <th>Topic</th>
-        <th>Resource</th>
-      </tr>
-      {% for resource in resources %}
-        {% set resourceTitle = resource.Name.title[0].plain_text %}
-        {% set resourceUrl = resource.URL.url %}
-        {% set resourceAuthor = resource.Author.rich_text[0].text.content %}
-        {% set resourceDesc = resource.Desc.rich_text[0].text.content %}
-        {% set resourceTags = resource.Tags.multi_select %}
-        {% set resourceFormat = resource.Format.select.name %}
-        {% if resourceTitle and resourceUrl %}
-          <tr>
-            <td>
-              {% set comma = joiner() %}
-              {% for tag in resourceTags -%}
-                {{ comma() }} {{ tag.name }}
-              {%- endfor %}
-            </td>
-            <td>
-              {% if resourceFormat and resourceFormat == "Book" %}📖{% endif %}
-              <a href="{{ resourceUrl }}">{{ resourceTitle }}</a>
-              {% if resourceAuthor %}
-                by {{ resourceAuthor }}
-              {% endif %}
-              {% if resourceDesc %}
-                <p>{{ resourceDesc }}</p>
-              {% endif %}
-            </td>
-          </tr>
-        {% endif %}
-      {% endfor %}
-    </table>
+    {% if resources %}
+      <table>
+        <tr>
+          <th>Topic</th>
+          <th>Resource</th>
+        </tr>
+        {% for resource in resources %}
+          {% set resourceTitle = resource.Name.title[0].plain_text %}
+          {% set resourceUrl = resource.URL.url %}
+          {% set resourceAuthor = resource.Author.rich_text[0].text.content %}
+          {% set resourceDesc = resource.Desc.rich_text[0].text.content %}
+          {% set resourceTags = resource.Tags.multi_select %}
+          {% set resourceFormat = resource.Format.select.name %}
+          {% if resourceTitle and resourceUrl %}
+            <tr>
+              <td>
+                {% set comma = joiner() %}
+                {% for tag in resourceTags -%}
+                  {{ comma() }} {{ tag.name }}
+                {%- endfor %}
+              </td>
+              <td>
+                {% if resourceFormat and resourceFormat == "Book" %}📖{% endif %}
+                <a href="{{ resourceUrl }}">{{ resourceTitle }}</a>
+                {% if resourceAuthor %}
+                  by {{ resourceAuthor }}
+                {% endif %}
+                {% if resourceDesc %}
+                  <p>{{ resourceDesc }}</p>
+                {% endif %}
+              </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </table>
+    {% else %}
+      <p>Sorry, something went wrong and the product resources couldn’t be fetched right now. This is probably on me! Please try again later; if you’re still seeing this error, feel free to <a href="https://melanie-richards.com/info">contact me</a> or <a href="https://github.com/melanierichards/product-resources/issues">file an issue</a>.</p>
+    {% endif %}
     <footer>
       <p>Compiled by <a href="https://melanie-richards.com">Melanie Richards</a>, using Eleventy and the Notion API. <a href="https://github.com/melanierichards/product-resources">Check out the code</a></p>
       <p>Disclosure: I’m an affiliate of Bookshop.org. Any book purchases you make using my Bookshop links will earn me (and local bookstores!) a small commission. Feel free to buy or borrow your books wherever you will, no need to use my link!</p>

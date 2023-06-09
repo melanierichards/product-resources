@@ -28,12 +28,10 @@ module.exports = async () => {
         }
       ]
     });
-    const resource = response.results.map(function(resource) {
-      return resource.properties;
-    });
 
-    console.log(resource);
-    return resource;
+    const resources = response.results.map(resource => resource.properties);
+    console.log(resources);
+    return resources;
   } catch(error) {
     console.error(error.body);
   }
