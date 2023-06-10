@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
     <header>
       <h1>Product Resources</h1>
-      <p>Just a list of resources related to product management that I’ve found useful.</p>
+      <p class="header__subtitle">Resources related to product management that I’ve found useful</p>
     </header>
     <main>
       {% if categories %}
@@ -20,7 +23,10 @@
           <ul>
             {% for category in categories %}
               <li>
-                <a href="#{{ category.name | lower | replace(' ', '-') | replace('→', '') }}">{{ category.name }}</a>
+                <a class="c-cat-link" href="#{{ category.name | lower | replace(' ', '-') | replace('→', '') }}">
+                  <span class="c-cat-link__deco" aria-hidden="true">⚹</span>
+                  {{ category.name }}
+                </a>
               </li>
             {% endfor %}
           </ul>
@@ -42,12 +48,14 @@
                   {% if resourceTitle and resourceUrl %}
                   <li class="c-resource">
                     <span class="c-resource__format">{{ resourceFormat }}</span>
-                    <a class="c-resource__title" href="{{ resourceUrl }}">{{ resourceTitle }}</a>
-                    {% if resourceAuthor %}
-                      <span class="c-resource__author">by {{ resourceAuthor }}</span>
-                    {% endif %}
+                    <span>
+                      <a class="c-resource__title" href="{{ resourceUrl }}">{{ resourceTitle }}</a>
+                      {% if resourceAuthor %}
+                        <span class="c-resource__author">by {{ resourceAuthor }}</span>
+                      {% endif %}
+                    </span>
                     {% if resourceDesc %}
-                      <p class="c-resource__desc">{{ resourceDesc }}</p>
+                      <span class="c-resource__desc">{{ resourceDesc }}</span>
                     {% endif %}
                   </li>
                   {% endif %}
@@ -61,8 +69,8 @@
       {% endif %}
     </main>
     <footer>
-      <p>Compiled by <a href="https://melanie-richards.com">Melanie Richards</a>, using Eleventy and the Notion API. <a href="https://github.com/melanierichards/product-resources">Check out the code</a></p>
-      <p>Disclosure: I’m an affiliate of Bookshop.org. Any book purchases you make using my Bookshop links will earn me (and local bookstores!) a small commission. Feel free to buy or borrow your books wherever you will, no need to use my link!</p>
+      <p>Compiled by <a href="https://melanie-richards.com">Melanie Richards</a>, using Eleventy and the Notion API, and deployed to Netlify. <a href="https://github.com/melanierichards/product-resources">Check out the code</a></p>
+      <p><small>Disclosure: I’m an affiliate of Bookshop.org. Any book purchases you make using my Bookshop links will earn me (and local bookstores!) a small commission. Feel free to buy or borrow your books wherever you will, no need to use my link!</small></p>
     </footer>
   </body>
 </html>

@@ -30,3 +30,51 @@
   --space-l: 4rem;
   --space-xl: 6rem;
 }
+
+:root {
+  --font-heading: "BioRhyme", serif;
+  --font-mono: "SF Mono", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/*
+ *  ---------------------------------------------
+ *  COLOR
+ *  ---------------------------------------------
+ */
+
+:root {
+  --color-bg: #fff;
+  --color-footer: #000;
+  --color-footer-bg: #EAF1EF;
+  --color-format: #000;
+  --color-format-bg: #EAF1EF;
+  --color-heading: #2F3E46;
+  --color-link: #44655C;
+  --color-main-heading: #354F52;
+  --color-selection: #000;
+  --color-selection-bg: #CCDCD8;
+  --color-text: #3b3b3b;
+}
+
+@mixin darkScheme {
+  color-scheme: dark;
+
+  --color-bg: #1b1b1b;
+  --color-footer: #fff;
+  --color-footer-bg: #2F4740;
+  --color-format: #fff;
+  --color-format-bg: #44655C;
+  --color-heading: #A3C1B9;
+  --color-link: #D6E3E0;
+  --color-main-heading: #A3C1B9;
+  --color-selection: #000;
+  --color-selection-bg: #CCDCD8;
+  --color-text: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include darkScheme;
+  }
+}
