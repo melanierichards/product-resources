@@ -12,41 +12,42 @@
       <h1>Product Resources</h1>
       <p>Just a list of resources related to product management that I’ve found useful.</p>
     </header>
-    {% if resources %}
-      <table>
-        <tr>
-          <th>Topic</th>
-          <th>Resource</th>
-        </tr>
-        {% for resource in resources %}
-          {% set resourceTitle = resource.Name.title[0].plain_text %}
-          {% set resourceUrl = resource.URL.url %}
-          {% set resourceAuthor = resource.Author.rich_text[0].text.content %}
-          {% set resourceDesc = resource.Desc.rich_text[0].text.content %}
-          {% set resourceTags = resource.Tags.multi_select %}
-          {% set resourceFormat = resource.Format.select.name %}
-          {% if resourceTitle and resourceUrl %}
-            <tr>
-              <td>
-                {% set comma = joiner() %}
-                {% for tag in resourceTags -%}
-                  {{ comma() }} {{ tag.name }}
-                {%- endfor %}
-              </td>
-              <td>
-                {% if resourceFormat and resourceFormat == "Book" %}📖{% endif %}
-                <a href="{{ resourceUrl }}">{{ resourceTitle }}</a>
-                {% if resourceAuthor %}
-                  by {{ resourceAuthor }}
-                {% endif %}
-                {% if resourceDesc %}
-                  <p>{{ resourceDesc }}</p>
-                {% endif %}
-              </td>
-            </tr>
-          {% endif %}
-        {% endfor %}
-      </table>
+    {% if categories %}
+      <nav aria-labelledby="jump-title">
+        <h2 id="jump-title">Jump to a category</h2>
+        <ul>
+          {% for category in categories %}
+            <li>
+              <a href="#{{ category.name | lower | replace(' ', '-') | replace('→', '') }}">{{ category.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <h2>Resources by category</h2>
+      {% for category in categories %}
+        <h3 id="{{ category.name | lower | replace(' ', '-') | replace('→', '') }}">{{ category.name }}</h3>
+        <ul>
+          {% for resource in category.items %}
+            {% set resourceTitle = resource.Name.title[0].plain_text %}
+            {% set resourceUrl = resource.URL.url %}
+            {% set resourceAuthor = resource.Author.rich_text[0].text.content %}
+            {% set resourceDesc = resource.Desc.rich_text[0].text.content %}
+            {% set resourceFormat = resource.Format.select.name %}
+            {% if resourceTitle and resourceUrl %}
+            <li>
+              <span class="c-resource__format">{{ resourceFormat }}</span>
+              <a class="c-resource__title" href="{{ resourceUrl }}">{{ resourceTitle }}</a>
+              {% if resourceAuthor %}
+                <span class="c-resource__author">by {{ resourceAuthor }}</span>
+              {% endif %}
+              {% if resourceDesc %}
+                <p class="c-resource__desc">{{ resourceDesc }}</p>
+              {% endif %}
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
     {% else %}
       <p>Sorry, something went wrong and the product resources couldn’t be fetched right now. This is probably on me! Please try again later; if you’re still seeing this error, feel free to <a href="https://melanie-richards.com/info">contact me</a> or <a href="https://github.com/melanierichards/product-resources/issues">file an issue</a>.</p>
     {% endif %}
