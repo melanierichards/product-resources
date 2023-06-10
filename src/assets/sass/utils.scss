@@ -1,0 +1,11 @@
+/*
+ *  =============================================
+ *  UTILITIES
+ *  =============================================
+ */
+
+@mixin small-caps {
+  font-size: .825rem;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+}
