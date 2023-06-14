@@ -15,6 +15,17 @@
  $bp-l: 64rem;
  $bp-xl: 96rem;
  $bp-xxl: 128rem;
+
+/*
+ *  ---------------------------------------------
+ *  TYPOGRAPHY
+ *  ---------------------------------------------
+ */
+
+:root {
+  --font-heading: "Messapia", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
  
 /*
  *  ---------------------------------------------
@@ -29,12 +40,6 @@
   --space-m: 2rem;
   --space-l: 4rem;
   --space-xl: 6rem;
-}
-
-:root {
-  --font-heading: "BioRhyme", serif;
-  --font-mono: "SF Mono", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /*

@@ -73,9 +73,7 @@ li {
 
 h1 {
   color: var(--color-main-heading);
-  font-size: 2rem;
-  font-weight: 900;
-  line-height: 1;
+  font: 700 2rem/1 var(--font-heading);
   margin: 0;
 }
 
@@ -127,8 +125,7 @@ h2 {
 
 h3 {
   color: var(--color-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font: 400 1.5rem/1 var(--font-heading);
   margin-bottom: var(--space-s);
 }
 
@@ -215,6 +212,7 @@ footer {
 
 @media (min-width: $bp-l) {
   html {
+    font-size: 1rem;
     padding: var(--space-l);
   }
 
@@ -254,5 +252,17 @@ footer {
       grid-column: 1;
       justify-self: start;
     }
+  }
+}
+
+/*
+ *  ---------------------------------------------
+ *  BREAKPOINT: XL
+ *  ---------------------------------------------
+ */
+
+@media (min-width: $bp-xl) {
+  html {
+    font-size: 1.125rem;
   }
 }

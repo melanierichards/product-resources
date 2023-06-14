@@ -1,0 +1,35 @@
+@font-face {
+  font-display: swap;
+  font-family: "Messapia";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Messapia-Regular.woff2") format("woff2"),
+  url("../fonts/Messapia-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Messapia";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Messapia-Bold.woff2") format("woff2"),
+  url("../fonts/Messapia-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+       url("../fonts/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"),
+       url("../fonts/Inter-Bold.woff") format("woff");
+}
