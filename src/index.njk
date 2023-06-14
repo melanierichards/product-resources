@@ -45,7 +45,7 @@
                   {% set resourceDesc = resource.Desc.rich_text[0].text.content %}
                   {% set resourceFormat = resource.Format.select.name %}
                   {% if resourceTitle and resourceUrl %}
-                  <li class="c-resource">
+                  <li class="c-resource c-resource--{{ resourceFormat | lower }}">
                     <span class="c-resource__format">{{ resourceFormat }}</span>
                     <span>
                       <a class="c-resource__title" href="{{ resourceUrl }}">{{ resourceTitle }}</a>

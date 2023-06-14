@@ -236,6 +236,56 @@ footer {
   .categories-wrap {
     flex: 1;
   }
+
+  .c-resource {
+    position: relative;
+  }
+
+  .c-resource__title:hover {
+    &::before {
+      content: "";
+      display: block;
+      height: 16px;
+      left: -24px;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+      width: 16px;
+      background: url("../images/icons.svg") no-repeat;
+    }
+  }
+
+  .c-resource--book .c-resource__title:hover {
+    &::before {
+      background-position-x: -16px;
+    }
+  }
+
+  .c-resource--article .c-resource__title:hover {
+    &::before {
+      background-position-x: -32px;
+    }
+  }
+
+  .c-resource--newsletter .c-resource__title:hover {
+    &::before {
+      background-position-x: -48px;
+    }
+  }
+
+  .c-resource--tool .c-resource__title:hover {
+    &::before {
+      background-position-x: -64px;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .c-resource__title:hover {
+      &::before {
+        background-image: url("../images/icons-dark.svg");
+      }
+    }
+  }
 }
 
 /*
