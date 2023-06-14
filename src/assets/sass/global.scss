@@ -71,15 +71,40 @@ li {
  *  ---------------------------------------------
  */
 
+.header {
+  padding-left: 4rem;
+  position: relative;
+}
+
 h1 {
   color: var(--color-main-heading);
   font: 700 2rem/1 var(--font-heading);
   margin: 0;
 }
 
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+}
+
 .header__subtitle {
   margin-top: var(--space-xs);
   font-size: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header__logo {
+    path, polyline, line {
+      stroke: #A3C1B9;
+    }
+
+    circle, #corner {
+      fill: #A3C1B9;
+    }
+  }
 }
 
 /*
@@ -177,6 +202,15 @@ footer {
   html,
   footer {
     padding: var(--space-m);
+  }
+
+  .header {
+    padding-left: 5rem;
+  }
+  
+  .header__logo {
+    width: 4rem;
+    height: 4rem;
   }
 
   h1 {
