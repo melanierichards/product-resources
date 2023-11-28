@@ -109,9 +109,39 @@ h1 {
 
 /*
  *  ---------------------------------------------
+ *  MAIN
+ *  ---------------------------------------------
+ */
+
+nav, section {
+  margin-top: var(--space-m);
+}
+
+h2, summary {
+  @include small-caps;
+  border-bottom: 1px solid;
+  font-weight: 700;
+  padding-bottom: var(--space-xs);
+}
+
+/*
+ *  ---------------------------------------------
  *  NAVIGATION
  *  ---------------------------------------------
  */
+
+summary::marker {
+  content: "+ ";
+  font-family: monospace;
+}
+
+details[open] summary::marker {
+  content: "- ";
+}
+
+summary:hover {
+  cursor: pointer;
+}
 
 .c-cat-link {
   position: relative;
@@ -133,16 +163,6 @@ h1 {
  *  RESOURCES
  *  ---------------------------------------------
  */
-
-h2, footer {
-  margin-top: var(--space-m);
-}
-
-h2 {
-  @include small-caps;
-  border-bottom: 1px solid;
-  padding-bottom: var(--space-xxs);
-}
 
 :not(h2) + h3 {
   margin-top: var(--space-m);
@@ -222,7 +242,7 @@ footer {
     align-items: baseline;
   }
 
-  h2, footer {
+  nav, section, footer {
     margin-top: var(--space-l);
   }
 
