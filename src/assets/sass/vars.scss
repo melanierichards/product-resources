@@ -60,6 +60,7 @@
   --color-selection: #000;
   --color-selection-bg: #CCDCD8;
   --color-text: #3b3b3b;
+  --color-text-secondary: #5b5b5b;
 }
 
 @mixin darkScheme {
@@ -76,6 +77,7 @@
   --color-selection: #000;
   --color-selection-bg: #CCDCD8;
   --color-text: #a2a2a2;
+  --color-text-secondary: #8b8b8b;
 }
 
 @media (prefers-color-scheme: dark) {
