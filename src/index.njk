@@ -48,15 +48,17 @@
                   {% set resourceFormat = resource.Format.select.name %}
                   {% if resourceTitle and resourceUrl %}
                   <li class="c-resource c-resource--{{ resourceFormat | lower }}">
-                    <span class="c-resource__format">{{ resourceFormat }}</span>
                     <span>
                       <a class="c-resource__title" href="{{ resourceUrl }}">{{ resourceTitle }}</a>
                       {% if resourceAuthor %}
                         <span class="c-resource__author">by {{ resourceAuthor }}</span>
                       {% endif %}
+                      {% if resourceFormat == "Book" %}
+                        <span class="c-resource__label">{{ resourceFormat }}</span>
+                      {% endif %}
                     </span>
                     {% if resourceDesc %}
-                      <span class="c-resource__desc">{{ resourceDesc }}</span>
+                      <p class="c-resource__desc">{{ resourceDesc }}</p>
                     {% endif %}
                   </li>
                   {% endif %}

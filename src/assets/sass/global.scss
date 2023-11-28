@@ -113,7 +113,7 @@ h1 {
  *  ---------------------------------------------
  */
 
-nav, section {
+nav, section, footer {
   margin-top: var(--space-m);
 }
 
@@ -174,7 +174,7 @@ h3 {
   margin-bottom: var(--space-s);
 }
 
-.c-resource__format {
+.c-resource__label {
   @include small-caps;
   background-color: var(--color-format-bg);
   color: var(--color-format);
@@ -185,7 +185,7 @@ h3 {
 }
 
 .c-resource__desc {
-  margin-top: var(--space-xxs);
+  margin: var(--space-xxs) 0 var(--space-s);
 }
 
 /*
@@ -281,21 +281,9 @@ footer {
     }
   }
 
-  .c-resource--article .c-resource__title:hover {
-    &::before {
-      background-position-x: -32px;
-    }
-  }
-
   .c-resource--newsletter .c-resource__title:hover {
     &::before {
       background-position-x: -48px;
-    }
-  }
-
-  .c-resource--tool .c-resource__title:hover {
-    &::before {
-      background-position-x: -64px;
     }
   }
 
@@ -326,36 +314,6 @@ footer {
 
   nav {
     margin-right: var(--space-xl);
-  }
-
-  @supports (grid-template-columns: subgrid) {
-    .categories {
-      column-gap: var(--space-xs);
-      display: grid;
-      grid-template-columns: auto 1fr;
-    }
-  
-    h3,
-    .c-resource-list,
-    .c-resource {
-      grid-column: span 2;
-      display: grid;
-      grid-template-columns: subgrid;
-    }
-  
-    /* Added spans so that the text wouldn't participate in the sizing of the first grid column */
-    h3 span {
-      grid-column: span 2;
-    }
-  
-    .c-resource > * {
-      grid-column: 2;
-    }
-  
-    .c-resource__format {
-      grid-column: 1;
-      justify-self: start;
-    }
   }
 }
 
