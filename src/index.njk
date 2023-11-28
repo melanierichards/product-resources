@@ -46,6 +46,7 @@
                   {% set resourceAuthor = resource.Author.rich_text[0].text.content %}
                   {% set resourceDesc = resource.Desc.rich_text[0].text.content %}
                   {% set resourceFormat = resource.Format.select.name %}
+                  {% set resourcePaywall = resource.Paywall.checkbox %}
                   {% if resourceTitle and resourceUrl %}
                   <li class="c-resource c-resource--{{ resourceFormat | lower }}">
                     <span>
@@ -55,6 +56,9 @@
                       {% endif %}
                       {% if resourceFormat == "Book" %}
                         <span class="c-resource__label">{{ resourceFormat }}</span>
+                      {% endif %}
+                      {% if resourcePaywall == true %}
+                        <span class="c-resource__label">Paywall</span>
                       {% endif %}
                     </span>
                     {% if resourceDesc %}
