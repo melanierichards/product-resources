@@ -8,10 +8,20 @@ module.exports = async () => {
     const response = await notion.databases.query({
       database_id: databaseId,
       filter: {
-        property: "Private",
-        checkbox: {
-          equals: false
-        }
+        and: [
+          {
+            property: "Private",
+            checkbox: {
+              equals: false
+            }
+          },
+          {
+            property: "Category",
+            select: {
+              does_not_equal: "News"
+            }
+          }
+        ]
       },
       sorts: [
         {
